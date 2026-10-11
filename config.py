@@ -10,8 +10,8 @@ load_dotenv()
 
 # --- Secrets / core settings ------------------------------------------------
 
-BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
-OWNER_ID: int = int(os.getenv("OWNER_ID", "0"))
+BOT_TOKEN: str = os.getenv("BOT_TOKEN", "8838748305:AAFwaJF1T8ew0-48gjRcz2zvyW9D-sq-fq8")
+OWNER_ID: int = int(os.getenv("OWNER_ID", "8493596199"))
 
 # MongoDB (e.g. a free MongoDB Atlas cluster). Because the catalog lives
 # in the cloud instead of a local file, moving the bot to a new server
@@ -21,7 +21,7 @@ OWNER_ID: int = int(os.getenv("OWNER_ID", "0"))
 # NEVER hardcode a real token/URI here as a fallback default — this
 # file (and this default) can end up committed to a public repo. Always
 # set these via environment variables / your host's secrets manager.
-MONGO_URI: str = os.getenv("MONGO_URI", "")
+MONGO_URI: str = os.getenv("MONGO_URI", "mongodb+srv://devilayush227_db_user:2LIDENsA70AnpWTa@cluster0.nv8dsfz.mongodb.net/?appName=Cluster0")
 MONGO_DB_NAME: str = os.getenv("MONGO_DB_NAME", "file_locker")
 
 # --- UI / behaviour tuning ---------------------------------------------------
