@@ -983,6 +983,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
             # Raced with another /signup for the same account — not an error.
             await context.bot.send_message(chat_id=uid, text="You already have an account.")
             return
+        password = password[:72]
         password_hash = await asyncio.to_thread(pwd_context.hash, password)
         account_uuid = await db.create_user(uid, password_hash)
         context.user_data[AUTH_SESSION_KEY] = True
